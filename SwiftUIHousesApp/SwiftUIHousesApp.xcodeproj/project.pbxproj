@@ -17,6 +17,9 @@
 		1AA52E5D2C5D0AFA006F4969 /* HousingComplexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA52E5C2C5D0AFA006F4969 /* HousingComplexView.swift */; };
 		1AA52E5F2C5D43E6006F4969 /* ButtonActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA52E5E2C5D43E6006F4969 /* ButtonActionView.swift */; };
 		1AA52E612C5D5174006F4969 /* HousingComplexInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA52E602C5D5174006F4969 /* HousingComplexInfoView.swift */; };
+		1AA52E632C5D54AB006F4969 /* HousingComplexModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA52E622C5D54AB006F4969 /* HousingComplexModel.swift */; };
+		1AA52E652C5E08A8006F4969 /* FlatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA52E642C5E08A8006F4969 /* FlatModel.swift */; };
+		1AA52E672C5E1108006F4969 /* Extension+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA52E662C5E1108006F4969 /* Extension+Text.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		1AA52E5C2C5D0AFA006F4969 /* HousingComplexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousingComplexView.swift; sourceTree = "<group>"; };
 		1AA52E5E2C5D43E6006F4969 /* ButtonActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonActionView.swift; sourceTree = "<group>"; };
 		1AA52E602C5D5174006F4969 /* HousingComplexInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousingComplexInfoView.swift; sourceTree = "<group>"; };
+		1AA52E622C5D54AB006F4969 /* HousingComplexModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousingComplexModel.swift; sourceTree = "<group>"; };
+		1AA52E642C5E08A8006F4969 /* FlatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatModel.swift; sourceTree = "<group>"; };
+		1AA52E662C5E1108006F4969 /* Extension+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Text.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,9 @@
 			isa = PBXGroup;
 			children = (
 				1AA52E482C5CC3EF006F4969 /* SwiftUIHousesAppApp.swift */,
+				1AA52E662C5E1108006F4969 /* Extension+Text.swift */,
+				1AA52E642C5E08A8006F4969 /* FlatModel.swift */,
+				1AA52E622C5D54AB006F4969 /* HousingComplexModel.swift */,
 				1AA52E602C5D5174006F4969 /* HousingComplexInfoView.swift */,
 				1AA52E5E2C5D43E6006F4969 /* ButtonActionView.swift */,
 				1AA52E5C2C5D0AFA006F4969 /* HousingComplexView.swift */,
@@ -155,14 +164,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AA52E652C5E08A8006F4969 /* FlatModel.swift in Sources */,
 				1AA52E592C5CDB25006F4969 /* HousePhotoView.swift in Sources */,
 				1AA52E4B2C5CC3EF006F4969 /* ContentView.swift in Sources */,
 				1AA52E5F2C5D43E6006F4969 /* ButtonActionView.swift in Sources */,
+				1AA52E672C5E1108006F4969 /* Extension+Text.swift in Sources */,
 				1AA52E612C5D5174006F4969 /* HousingComplexInfoView.swift in Sources */,
 				1AA52E492C5CC3EF006F4969 /* SwiftUIHousesAppApp.swift in Sources */,
 				1AA52E572C5CC652006F4969 /* HousingComplexItemView.swift in Sources */,
 				1AA52E5B2C5CFDC9006F4969 /* PriceView.swift in Sources */,
 				1AA52E5D2C5D0AFA006F4969 /* HousingComplexView.swift in Sources */,
+				1AA52E632C5D54AB006F4969 /* HousingComplexModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

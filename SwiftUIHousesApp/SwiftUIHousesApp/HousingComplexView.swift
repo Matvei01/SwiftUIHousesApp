@@ -8,26 +8,36 @@
 import SwiftUI
 
 struct HousingComplexView: View {
-    
     @Environment(\.dismiss) var dismiss
+    
+    let flats: [FlatModel]
+    let housingComplex: HousingComplexModel
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            ScrollView {
+            ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 35) {
                     VStack(alignment: .leading, spacing: 21) {
-                        HousePhotoView(height: 421, topPadding: 68)
+                        HousePhotoView(
+                            imageName: housingComplex.image,
+                            height: 421,
+                            topPadding: 68
+                        )
                         VStack {
-                            HousingComplexInfoView()
+                            HousingComplexInfoView(
+                                name: housingComplex.name,
+                                price: housingComplex.price,
+                                address: housingComplex.address
+                            )
                         }
                         HStack(spacing: 6) {
-                            ForEach(0..<3) { _ in
-                                PriceView()
+                            ForEach(housingComplex.roomTypes, id: \.numberOfRooms) { room in
+                                PriceView(roomType: room.numberOfRooms, price: room.price)
                             }
                         }
                         .padding(.horizontal, 18)
                     }
-                    ApartmentFinishesView()
+                    ApartmentFinishesView(flats: flats)
                 }
             }
             HStack {
@@ -64,12 +74,8 @@ struct HousingComplexView: View {
     }
 }
 
-#Preview {
-    HousingComplexView()
-}
-
 struct ApartmentFinishesView: View {
-    
+    var flats: [FlatModel]
     var rows: [GridItem] = [
         GridItem(.flexible(), spacing: 5),
         GridItem(.flexible(), spacing: 5)
@@ -78,12 +84,12 @@ struct ApartmentFinishesView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
             Text("Отделка квартир")
-                .font(.system(size: 22, weight: .bold))
+                .boldFont()
             ZStack(alignment: .bottom) {
-                ScrollView(.vertical) {
+                ScrollView(.vertical, showsIndicators: false) {
                     LazyVGrid(columns: rows, spacing: 5) {
-                        ForEach(0..<6) { _ in
-                            Image(.flat3)
+                        ForEach(flats, id: \.id) { flat in
+                            Image(flat.image)
                                 .resizable()
                                 .scaledToFit()
                                 .clipShape(RoundedRectangle(cornerRadius: 6))

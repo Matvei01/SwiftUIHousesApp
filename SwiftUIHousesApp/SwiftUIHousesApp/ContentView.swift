@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    private let housingComplexes = HousingComplexModel.getHousingComplexes()
+    private let flats = FlatModel.getFlats()
+    
     var body: some View {
         NavigationStack {
             ZStack(alignment: .top) {
                 VStack(alignment: .leading) {
-                    Text("10 предложений")
+                    Text("\(housingComplexes.count) предложений")
                         .font(.system(size: 16, weight: .medium))
-                    ScrollView(.vertical) {
+                    ScrollView(.vertical, showsIndicators: false) {
                         VStack(spacing: 15) {
-                            ForEach(0..<10) { _ in
-                                NavigationLink(destination: HousingComplexView()) {
-                                    HousingComplexItemView()
+                            ForEach(housingComplexes, id: \.id) { complex in
+                                NavigationLink(destination: HousingComplexView(flats: flats, housingComplex: complex)) {
+                                    HousingComplexItemView(housingComplex: complex)
                                         .foregroundStyle(.black)
                                 }
                             }
