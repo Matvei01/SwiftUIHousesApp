@@ -8,22 +8,21 @@
 import SwiftUI
 
 struct PriceView: View {
+    let roomType: String
+    let price: String
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 6)
                 .frame(width: 82, height: 43)
                 .foregroundStyle(.appGray)
             VStack(alignment: .leading, spacing: 8) {
-                Text("Студии")
+                Text(roomType)
                     .font(.system(size: 10, weight: .regular))
-                .foregroundStyle(.appDark)
-                Text("от 8 млн ₽")
+                    .foregroundStyle(.appDark)
+                Text(price)
                     .font(.system(size: 10, weight: .medium))
             }
         }
     }
-}
-
-#Preview {
-    PriceView()
 }

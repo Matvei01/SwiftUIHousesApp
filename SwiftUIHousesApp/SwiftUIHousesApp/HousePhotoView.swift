@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct HousePhotoView: View {
-    
+    let imageName: String
     let height: CGFloat
+    
     var cornerRadius: CGFloat? = nil
     var topPadding: CGFloat
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            Image(.houses1)
+            Image(imageName)
                 .resizable()
                 .frame(height: height)
                 .clipShape(
@@ -34,8 +35,4 @@ struct HousePhotoView: View {
             
         }
     }
-}
-
-#Preview {
-    HousePhotoView(height: 200, topPadding: 19)
 }

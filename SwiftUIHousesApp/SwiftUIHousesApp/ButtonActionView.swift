@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ButtonActionView: View {
-    
     let title: String
     let textColor: Color
     let backgroundColor: Color
